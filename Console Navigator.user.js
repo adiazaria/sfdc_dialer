@@ -6,15 +6,10 @@
 // @include       https://na14.salesforce.com/00Q?*
 // @match https://na14.salesforce.com/00Q?*
 // ==/UserScript==
-var index;
+
 
 $(document).ready(function () 
 {
-    
-    debugger;
-
-
-    
     function nextItem() 
     {
         var table =  $('table')[0];
@@ -22,9 +17,6 @@ $(document).ready(function ()
         var selectedRow = $(".list tr.bRowHilight");
         
         var refreshItem = $(window.parent.document).find('.consoleMenu #rottenImage');
-        
-        //handleFilterSelect('All Attp Contact');
-        debugger;
         
         //if there is a new item refresh the list. 
         if(refreshItem && refreshItem.attr('style').indexOf('color: rgb(255, 0, 0)') > -1 && refreshItem.attr('style').indexOf('display: none') == -1)
@@ -35,7 +27,7 @@ $(document).ready(function ()
         
         if(!selectedRow || selectedRow.length < 1)
         {
-            debugger;
+            //debugger;
             selectedRow = $('table')[0].rows[0];
         }
         
@@ -60,7 +52,7 @@ $(document).ready(function ()
         }
         else
         {
-            debugger;
+            //debugger;
             
             var nextPage = $('.next');
             
@@ -99,8 +91,6 @@ $(document).ready(function ()
         
       $(menuobj).on('click', '#next_call', function(){
           nextItem();
-	  });
-        
-
+      });
     }
 });
